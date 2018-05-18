@@ -1,0 +1,19 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LocatorsDemo {
+
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.chrome.driver", "D:\\Amruta\\Selenium\\Selenium\\WebDriver exe\\chromedriver.exe"); 
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com/");
+		driver.get("http://www.qaclickacademy.com/interview.php");
+		driver.findElement(By.xpath("//li[@id=\"tablist1-tab1\"]/following-sibling::li")).click();
+		driver.findElement(By.xpath("//li[@id=\"tablist1-tab1\"]/following-sibling::li[1]")).click();
+		driver.findElement(By.xpath("//li[@id=\"tablist1-tab1\"]/following-sibling::li[2]")).click();
+		driver.findElement(By.xpath("//li[@id=\"tablist1-tab1\"]/following-sibling::li[3]")).click();
+}

@@ -1,0 +1,42 @@
+package Emp;
+
+public class Statement {
+
+	public static void main(String[] args)
+	{
+	//int myScore = 400;
+	//	if (myScore < 5000 && myScore > 1000){
+	//	System.out.println("Your score is greater than 1000 but less than 5000 ");
+	//	} else if (myScore<1000) {
+	//	System.out.println("Your score is less than 1000");
+	//}    else 
+	//{
+	//	System.out.println("Got here");
+	//}
+	boolean gameover= true;
+	int score =800;
+	int bonus= 100;
+	int levelcompleted=5;
+	
+	int highScore = calculateScore(true, 800, 100, 5);
+	System.out.println("Your score is ="  + highScore);
+	
+	score=1000;
+	bonus=200;
+	levelcompleted=8;
+	highScore= calculateScore(true, 10000, 200, 8);
+	System.out.println("Your score is ="  + highScore);
+	}
+
+	public static int calculateScore(boolean gameover, int score, int bonus, int levelcompleted) {
+		
+		
+			if (gameover) {
+				int finalscore= score +(levelcompleted*bonus);
+				finalscore+=1000;
+				System.out.println("Your score is ="  + finalscore);
+				return finalscore;
+		}
+				return -1;
+}
+}

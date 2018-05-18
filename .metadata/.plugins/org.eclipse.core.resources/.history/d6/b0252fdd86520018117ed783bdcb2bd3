@@ -1,0 +1,21 @@
+package Numbers;
+
+public class Selenium {
+   int x=10;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		void print()
+		{
+			int a=20;
+			System.out.println(a);
+		}
+		
+		
+		Selenium obj=new Selenium();
+		System.out.println(obj.x);
+		System.out.println(obj.print());
+	}
+
+}

@@ -1,0 +1,28 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LocatorsDemo {
+
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.chrome.driver", "D:\\Amruta\\Selenium\\Selenium\\WebDriver exe\\chromedriver.exe"); 
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com/");
+		driver.get("https://www.ebay.in/");
+		driver.findElement(By.name("_nkw")).sendKeys("Apple iPhone 6s"); 
+		driver.findElement(By.id("gh-btn")).click();
+		driver.findElement(By.className("cbx")).click();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

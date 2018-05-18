@@ -1,0 +1,40 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// provide location of webdriver in your system
+		System.setProperty("webdriver.chrome.driver", "D:\\Amruta\\Selenium\\Selenium\\WebDriver exe\\chromedriver.exe"); 
+		// create driver object for Chrome browser
+		WebDriver driver = new ChromeDriver();
+		
+		
+		// Hit URL
+		driver.get("https://facebook.com");
+		/*//Xpath creation
+		driver.findElement(By.xpath("//input[@type = 'email']")).sendKeys("my email id by xpath");
+		driver.findElement(By.xpath("//input[@name = 'pass']")).sendKeys("my password");
+		driver.findElement(By.xpath("//*[@value = 'Log In']")).click();		*/
+				
+		//css creation
+		driver.findElement(By.cssSelector("input[type = 'email']")).sendKeys("my email id by xpath");
+		driver.findElement(By.cssSelector("input[id = 'pass']")).sendKeys("my password");
+		driver.findElement(By.cssSelector("input#Log In")).click();	
+		
+		
+		
+		/*//Automatic selection using browser tool 
+		driver.findElement(By.cssSelector("#email")).sendKeys("MyEmail ID ");
+		driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("My Password");
+		
+		/*driver.findElement(By.id("email")).sendKeys("This is my emailID");
+		driver.findElement(By.name("pass")).sendKeys("123456");
+		driver.findElement(By.linkText("Forgotten account?")).click();*/
+		
+	}
+
+}

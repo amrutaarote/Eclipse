@@ -1,0 +1,35 @@
+package Numbers;
+
+public class Selenium {
+   
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int a=10;
+		int b=20;
+		if(a>b)
+		{
+			System.out.println("A is greater" + a);
+		}
+	     
+		else
+		{
+			System.out.println("B is greater" + b);
+		}
+	
+		int i;
+		for(i=0;i<=10;i++)
+		{
+			System.out.println(i);
+		}
+	
+		x=2;
+		while(x<=10)
+		{
+			System.out.println(x);
+			x=x+2;
+		}
+	}
+
+}

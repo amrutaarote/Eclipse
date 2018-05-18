@@ -1,0 +1,75 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LocatorsDemo {
+
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.chrome.driver", "D:\\Amruta\\Selenium\\Selenium\\WebDriver exe\\chromedriver.exe"); 
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com/");
+		driver.get("https://www.ebay.in/");
+		driver.findElement(By.name("_nkw")).sendKeys("Apple iPhone 6s"); 
+		driver.findElement(By.id("gh-btn")).click();
+		driver.findElement(By.xpath("//input[@aria-label='Grey']")).click();
+			//Alternative Path
+				//xpath("//input[@aria-label='Grey'][@type='checkbox']")
+				//xpath("//input[@aria-label='Grey' and @type='checkbox']")
+				//input[@aria-label='Grey' = @type='checkbox']
+		driver.findElement(By.xpath("//input[@value=\'LH_Auction\']")).click();
+				//driver.findElement(By.cssSelector("input#e1-17")).click();
+			//Alternative Path
+		driver.findElement(By.cssSelector("input[value='LH_AllListings']")).click();
+				//driver.findElement(By.xpath("//input[@value='LH_AllListings']")).click();	
+		driver.findElement(By.cssSelector("input[aria-label='Grey']")).click();
+		driver.navigate().back();
+		driver.findElement(By.linkText("apple iphone 6s 32gb")).click();
+		driver.findElement(By.className("img")).click();
+			//Alternative locators:
+				/* //driver.findElement(By.xpath("//img[@alt='Apple iPhone 6S 32GB Rose Gold Color Brand New']")).click();
+				 *   driver.findElement(By.cssSelector("img[alt='Apple iPhone 6S 32GB Rose Gold Color Brand New']")).click(); */
+		driver.findElement(By.id("isCartBtn_btn")).click();
+			//Alternative locators:
+				/* By.cssSelector = a#isCartBtn_btn- (tagName#id)
+				 * By.cssSelector = a[id='isCartBtn_btn'] (tagName[Attribute='value'])
+				 * By.xpath = //a[@id='isCartBtn_btn'] (//tagName[@Attribute='value'])*/
+		driver.findElement(By.className("xo-itm-remv")).click();
+		driver.findElement(By.partialLinkText("Shopping")).click();
+		
+		
+		//driver.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*String str = element.getText();
+		System.out.println("str");
+		element.click();*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package Numbers;
+
+public class Selenium {
+   
+	public static void main(String[] args) {
+		// TODO Auto-generint ated method stub
+		
+int i = 6;
+{
+ for (i = 1; i<6; i++)
+	 System.out.println("*");
+     }
+	}
+}
